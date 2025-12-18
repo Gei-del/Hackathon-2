@@ -16,4 +16,4 @@ Estructura que se va manejar en Java.
 modelo --> Contacto
 Agenda --> logica de negocio
 
-Trateremos de Separar de siguiente forma:  modelo, negocio y UI para que el sistema sea mantenible y fácil de evaluar.
+Trateremos de Separar de siguiente forma:  modelo, negocio y Interfaz para que el sistema sea mantenible y fácil de evaluar.
