@@ -3,10 +3,7 @@ package model;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-/**
- * Modelo de Contacto.
- * Regla de igualdad: nombre + apellido (case-insensitive).
- */
+
 public class Contacto {
 
     private final String nombre;
@@ -60,10 +57,6 @@ public class Contacto {
         return valor == null ? "" : valor.trim();
     }
 
-    /**
-     * Igualdad: mismo nombre y apellido (sin distinguir mayúsculas/minúsculas).
-     * El teléfono NO se usa para comparar duplicados.
-     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Lógica de negocio de la Agenda.
- * Responsabilidad: gestionar contactos y reglas (capacidad, duplicados, búsquedas, etc.).
- */
+/*Lógica de negocio de la Agenda.*/
 public class Agenda {
 
     private final int tamanioMaximo;
@@ -42,10 +39,6 @@ public class Agenda {
         return contactos.contains(c);
     }
 
-    /**
-     * Devuelve lista ordenada alfabéticamente por nombre y apellido.
-     * No expone la lista interna: retorna una copia.
-     */
     public List<Contacto> listarContactosOrdenados() {
         List<Contacto> copia = new ArrayList<>(contactos);
         copia.sort(Comparator.comparing(Contacto::getNombre, String.CASE_INSENSITIVE_ORDER)
@@ -53,9 +46,7 @@ public class Agenda {
         return copia;
     }
 
-    /**
-     * Busca por nombre+apellido. Retorna teléfono si existe.
-     */
+
     public String buscaContacto(String nombre, String apellido) {
         int idx = indexOfContacto(nombre, apellido);
         if (idx == -1) {
@@ -86,7 +77,6 @@ public class Agenda {
         return tamanioMaximo - contactos.size();
     }
 
-    // --- Helpers privados (para evitar duplicar bucles) ---
 
     private int indexOfContacto(String nombre, String apellido) {
         // Creamos “dummy” con teléfono válido para poder usar equals (solo compara nombre+apellido).
